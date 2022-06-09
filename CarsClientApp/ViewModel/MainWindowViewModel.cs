@@ -127,9 +127,9 @@ namespace CarsClientApp.ViewModel
             SelectedCar.Company != string.Empty && SelectedCar.Model != string.Empty;
              
         private bool CanAddCar(object arg) =>
-            NewCar.Company != null && NewCar.Company != string.Empty && 
-            NewCar.Model != null && NewCar.Model != string.Empty && 
-            NewCar.FileName != null && NewCar.FileName != string.Empty;                
+            NewCar.Company != null && NewCar.Company.Trim() != string.Empty && 
+            NewCar.Model != null && NewCar.Model.Trim() != string.Empty && 
+            NewCar.FileName != null && NewCar.FileName.Trim() != string.Empty;                
 
         private bool CanRemoveCar(object arg) => SelectedCar != null;
 
